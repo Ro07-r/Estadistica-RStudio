@@ -91,3 +91,8 @@ barplot(table(plastico$`¿Qué opina de tener una retribución económica por ca
 #GRAFICO BARRAS
 color_3 = c("blueviolet","aquamarine", "deeppink4") #Se asignan colores a la variable color3
 barplot(table(plastico$`Si tuviese una retribución económica por reciclar ¿estaría mejor predispuesto a hacerlo?`), main = "¿Retribución por reciclar, mejora predisposición?",xlab = "Opciones", ylab = "Frecuencia", col= color_3, ylim = c(0,100))
+#Convierte a columnas
+dtf2 <- data.frame(x= rango_edades, y= encuesta2$interes_app_reciclaje)
+dtf2
+#Gráfico de puntos
+ggplot (data = dtf2, aes (x= x, y= y, colour= y)) + geom_point() + xlim (18, 70) + ylim (1, 5) + labs(title = "Relación edad e interés en App Reciclaje", x= "Rango edades", y= "Nivel de interés", col= c("Niveles"))
