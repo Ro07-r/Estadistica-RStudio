@@ -68,14 +68,14 @@ pie(count) #Se llama a la función pie para hacer un diagrama circular
 pie(count, labels = paste0(count, "%")) 
 color_1 <- c("coral", "darkorchid", "chartreuse")
 pie(count, labels = count, col = color_1, density = 30, angle = 30) #Sombreado 
-pie(count, labels = count, col = color_1, density = 30, angle = 30, main = "¿Estaría dispuesto a llevar los residuos a un punto de reciclaje cercano?")
+pie(count, labels = count, col = color_1, density = 30, angle = 30, main = "¿Llevaría los residuos a un punto de reciclaje cercano?")
 legend("topright", c("Si", "No", "No sé"), cex = 0.8, fill = color_1)
 #GRAFICO CIRCULAR
 valores <- c(80, 13, 7)
 pie(valores)
 pie(valores, labels = paste0(valores, "%"))
 color_3 <- c("darkolivegreen1", "deeppink", "darkgoldenrod1")
-pie(valores, labels = valores, col = color_3, density = 30, angle = 30, main = "¿Preferiría que un servicio tercerizado se encargue de retirar los residuos plásticos de su domicilio?")
+pie(valores, labels = valores, col = color_3, density = 30, angle = 30, main = "¿Preferiría un servicio tercerizado?")
 legend("topright", c("Si", "No", "No sé"), bty = "n", fill = color_3) #bty = "n" -> leyenda sin bordes
 #GRAFICO CIRCULAR
 count <- c(90, 5, 5) #Se guarda en una variable el vector con los valores que va a tener el gráfico
@@ -83,11 +83,11 @@ pie(count) #Se llama a la función pie para hacer un diagrama circular
 pie(count, labels = paste0(count, "%")) 
 color_3 <- c("blue4", "cyan1", "darksalmon")
 pie(count, labels = count, col = color_3, density = 30, angle = 30) #Sombreado 
-pie(count, labels = count, col = color_3, density = 30, angle = 30, main = "¿Le interesaría tener sistemas de depósito de envases en Supermercados cercanos a su domicilio?")
+pie(count, labels = count, col = color_3, density = 30, angle = 30, main = "¿Depósito de envases en Supermercados cercanos?")
 legend("topright", c("Si", "No", "No sé"), cex = 1, fill = color_3)
 #GRAFICO BARRAS
 color2 = c("red3","green1", "blue3", "yellow2") #Se asignan colores a la variable color2
-barplot(table(plastico$`¿Qué opina de tener una retribución económica por cada envase depositado en estos sistemas de depósito? (Cashback, Subsidio en Impuestos, etc)`), main = "¿Qué opina de una retribución económica por cada envase depositado?",xlab = "Opciones", ylab = "Frecuencia", col= color2, ylim = c(0,100))
+barplot(table(plastico$`¿Qué opina de tener una retribución económica por cada envase depositado en estos sistemas de depósito? (Cashback, Subsidio en Impuestos, etc)`), main = "¿Retribución económica por envase depositado?",xlab = "Opciones", ylab = "Frecuencia", col= color2, ylim = c(0,100))
 #GRAFICO BARRAS
 color_3 = c("blueviolet","aquamarine", "deeppink4") #Se asignan colores a la variable color3
-barplot(table(plastico$`Si tuviese una retribución económica por reciclar ¿estaría mejor predispuesto a hacerlo?`), main = "¿Estaría mejor predispuesto si tuviese una retribución por reciclar?",xlab = "Opciones", ylab = "Frecuencia", col= color_3, ylim = c(0,100))
+barplot(table(plastico$`Si tuviese una retribución económica por reciclar ¿estaría mejor predispuesto a hacerlo?`), main = "¿Retribución por reciclar, mejora predisposición?",xlab = "Opciones", ylab = "Frecuencia", col= color_3, ylim = c(0,100))
